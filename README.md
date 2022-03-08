@@ -12,3 +12,6 @@ En este repositorio se encuentran realizadas las distintas tareas de la asignatu
 
 ## Tarea 1: Seminario DCU
 - [Enlace al documento donde se desarrolla.](https://docs.google.com/document/d/1IiCimpnO43lct76sAcYCpZ_qZgNoAimc4LIq8LAmAaQ/edit?usp=sharing)
+
+## Tarea 3 - Introducción a HTML
+- **Tema de la página web**: Venta de compononentes de ordenador.
