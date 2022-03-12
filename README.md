@@ -17,4 +17,5 @@ En este repositorio se encuentran realizadas las distintas tareas de la asignatu
 - [Enlace al documento donde se desarrolla](https://docs.google.com/document/d/158SJMxz8p9Y1sl8qNpgEX-Y1p3m1n43fpl4p1o25iYY/edit?usp=sharing)
 
 ## Tarea 3: Introducción a HTML
+- **Nombre de la web**: PCbre
 - **Tema de la página web**: Venta de compononentes de ordenador.
