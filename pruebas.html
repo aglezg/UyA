@@ -1,0 +1,109 @@
+<html lang = 'es'>
+  
+  <head>
+    <title>
+      Titulo de ejemplo
+    </title>
+  </head>
+
+  <body>
+
+    <h1>
+      Encabezado de tamaño 1
+    </h1>
+
+    <p>
+      Este es el inicio de un párrafo. Todo lo que va dentro de un párrafo se escribe de seguido.
+      <br> A menos que usemos br para una nueva linea <br>
+      <dfn> "Esto es una definición" Sale en cursiva y apagada</dfn> <br>
+      <abbr> Esto es una abreviatura, pero nose, lo veo diferencia</abbr><br>
+    </p>
+
+    <p>
+      <em> Texto en cursiva </em>
+      <strong> Texto en negrita </strong>
+    </p>
+    <p>
+      <a href = "test.html"> href nos permite poner un enlace </a>
+    </p>
+
+    <p>
+      Veamos ahora un ejemplo de listas NO ordenada <br>
+      <ul>
+        <li> elemento 1 </li>
+        <li> elemento 2 </li>
+        <li> elemento 3</li>
+      </ul>
+    </p>
+
+    <p>
+      Ahora un ejemplo de lista SI ordenada <br>
+      <ol> Y si metemos texto aqui? Sale desplazado a la derecha
+        <li> elemento 1 </li>
+        <li> elemento 2 </li>
+        <li> elemento 3 </li>
+      </ol>
+    </p>
+
+    <p>
+      Pongamos ahora alguna imagen <br>
+      <img src="./images/pantalla.png"> Necesitamos especificar la ruta donde se encuentra con 'src'>
+      <br>
+      <img src="./images/pantalla.png"> <br>
+      <img src="./imagen/pantalla.png" name="nombre imagen, no se ve en el navegador"><br>
+      <img src="./images/pantalla.png" alt="descripcion corta"> <br>
+      <img src="./images/pantalla.png" width="10%" height="40%"> Se puede expresar en porcentajes<br>
+    </p>
+
+    <p>
+      Veamos ahora las <strong> tablas </strong><br>
+      Las filas se marcan con 'tr' y las columnas con 'td' <br>
+      <caption> TITULO </caption>
+      <table>
+        <tr>
+          <td abbr="texto"> celda 11 la extendemos a ver </tda> <td> celda 22 </td>
+        </tr>
+        <tr>
+          <td rowspan="2"> celda 21, rowspan=numero filas q ocupa </td> <td> celda 22 </td>
+        </tr>
+        <tr>
+          <td colspan="2"> Con colspan podemos definir <br> el numero de columnas q ocupa la celda</td>
+        </tr>
+      </table>
+    </p>
+
+    <p> Veamos ahora un ejemplo de formularo <br>
+      <input type="text" value="valor inicial"> Elemento 1 <br>
+      <input type="password"> Elemento 2 formato contraseña<br>
+      <input type="checkbox"> Cassilla para marcar un tick <br>
+      <input type="radio"> Punto par marcar, no se puede desfijar<br>
+      <input type="radio"> punto 2<br>
+      <input type="submit" value="hola"> Este es como un botón a pulsar <br>
+      <input type="reset"> Actua tambien como otro boton <br>
+      <input type="file"> Te permite subir un archivo <br>
+      <input type="hidden"> Este no lo entiendo, es un boton oculto ¿para que sirve? <br>
+      <input type="image" src="./images/pantalla.png"> boton con imagen? <br>
+      <input type="button"> Define un botón sin más <br>
+    </p>
+
+    <p>
+      Asi podemos poner una imagen con enlace <br>
+      <a href="./test.html"> <img src="./images/pantalla.png"></a> imagen con enlace<br>
+    </p>
+
+    <p>
+      Hagamos ahora un formulario en el que podamos agrupar.
+      <fieldset> Grupo 1 (engloba los elementos en un marco) <br>
+        <legend> Titulo del grupo (sale arriba-izquierda del marco)</legend>
+        <label> Nombre  del elemento</label><input> el 1 <br>
+        <input> el 2 <br>
+        <textarea> Areas de texto, permite escribir dentro (como una nota)</textarea> <br>
+        <select> Listas desplegables
+          <option> opcion 1 </option>
+          <option> opcion 2 </option>
+        </select>
+      </fieldset>
+    </p>
+
+  </body>
+</html>
