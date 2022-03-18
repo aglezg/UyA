@@ -26,22 +26,65 @@ una imagen de fondo llamada cabecera.jpg. Incorporar   #
 
 .mainclass {
   width: 770px;
-  background: green;
+
   /*border: 10px solid blue;*/
   font-family: Arial;
   color: black;
   font-size: 1.5em ;
+  background-image: url('./images/PCbre.jpg');
+}
+
+.fondoGlobal {
+  background-image: url('./images/PCbre.jpg')
+}
+
+li {
+  display: inline;  
 }
 
 .cabecera {
-    height:  100px;
-    background: red;
+  height:  100px;
+  width: 770px;
+  font-size: 0.9em;
+  float: left;
+  text-align: top;
+  background-image: url('./images/PCbre.jpg')
 }
+
+img.alineadoTextoImagenCentro{
+  vertical-align: middle;
+}
+
 .cabecera.titulo {
-    font-size: 40px;
+  font-size: 40px;
 }
+
 .columnaDerecha {
-    width: 130;
+  width: 130px;
+  height: 500px;
+  background: rgb(116, 77, 52);
+  float: right;
+}
+
+.contenidoSecundario {
+  width: 255px;
+  height: 500px;
+  background: rgb(224, 102, 25);
+  float: left;
+}
+
+.contenidoPrimario {
+  width: 385px;
+  height: 500px;
+  background: rgb(243, 178, 137);
+  float: left;
+}
+
+.piePagina {
+  width: 770px;
+  height: 100px;
+  background: rgb(207, 85, 9);
+  float: left;
 }
 
 a:link {color: blue;}
@@ -59,3 +102,4 @@ body {
 p {
   border-top-width: 0.5em;
 }
+
