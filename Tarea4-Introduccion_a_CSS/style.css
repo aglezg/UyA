@@ -26,64 +26,53 @@ una imagen de fondo llamada cabecera.jpg. Incorporar   #
 
 .mainclass {
   width: 770px;
-
-  /*border: 10px solid blue;*/
   font-family: Arial;
-  color: black;
-  font-size: 1.5em ;
-  background-image: url('./images/PCbre.jpg');
-}
-
-.fondoGlobal {
-  background-image: url('./images/PCbre.jpg')
-}
-
-li {
-  display: inline;  
+  /*color: black;*/
+  font-size: 1,5em ;
 }
 
 .cabecera {
   height:  100px;
   width: 770px;
-  font-size: 0.9em;
+  font-size: 0.88em;
   float: left;
   text-align: top;
-  background-image: url('./images/PCbre.jpg')
+  background-image: url('./images/banner.jpg');
 }
 
-img.alineadoTextoImagenCentro{
-  vertical-align: middle;
+.cabecera a:hover {
+  background-color: #111;
 }
 
 .cabecera.titulo {
   font-size: 40px;
 }
 
-.columnaDerecha {
-  width: 130px;
-  height: 500px;
-  background: rgb(116, 77, 52);
-  float: right;
+.contenidoPrimario {
+  width: 385px;
+  height: 610;
+  /*background: rgb(243, 178, 137);*/
+  float: left;
 }
 
 .contenidoSecundario {
   width: 255px;
-  height: 500px;
-  background: rgb(224, 102, 25);
+  height: 610;
+  /*background: rgb(224, 102, 25);*/
   float: left;
 }
 
-.contenidoPrimario {
-  width: 385px;
-  height: 500px;
-  background: rgb(243, 178, 137);
-  float: left;
+.columnaDerecha {
+  width: 130px;
+  height: 610;
+  /*background: rgb(116, 77, 52);*/
+  float: right;
 }
 
 .piePagina {
   width: 770px;
   height: 100px;
-  background: rgb(207, 85, 9);
+  /*background: rgb(207, 85, 9);*/
   float: left;
 }
 
@@ -91,15 +80,97 @@ a:link {color: blue;}
 a:hover {color: red;}
 a:visited {color: aqua}
 
-table.a {
-    color: green;
+table a:link {
+  color: green;
 }
 
-body {
-  color: green;
+table a:hover {
+  color: red;
+}
+
+table {
+  margin-right: 10;
+  margin-left: 10;
 }
 
 p {
   border-top-width: 0.5em;
 }
 
+p.justificado {
+  text-align:justify;
+  padding-right: 10;
+  padding-left: 10;
+}
+
+li {
+  display: inline;  
+}
+
+img.alineadoTextoImagenCentro{
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+.dropbtn {
+  background-color: #1e9fb6;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+
+
+
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
