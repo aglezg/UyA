@@ -10,3 +10,8 @@
 .sectionBottomCustom {
   font-size: 1.8em;
 }
+
+.inline-icon {
+  vertical-align: bottom;
+  font-size: 18px !important;
+}
