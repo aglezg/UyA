@@ -14,7 +14,6 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src = 'js/ej3.js' type="text/javascript"></script>
   </head>
   <body>
     <div class="row">
@@ -143,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div class="col s3">
+      <div class="col s2">
           <div class="sectionCustom"></div>
           <div class="card horizontal">
             <div class="row">
@@ -174,6 +173,8 @@
               </div>
             </div>
           </div>
+      </div>
+      <div class="col s2" id="card">
       </div>
     </div>
     <div class="section">
@@ -237,7 +238,26 @@
         </div>
       </div>
     </footer>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate" name="titulo">
+            <label for="icon_prefix">Introduce el titulo</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="text" class="validate" name="descripcion">
+            <label for="icon_telephone">Introduce una brebe descripcion</label>
+          </div>
+        </div>
+        <button onclick="sub();return false;">Enviar</button>
+      </form>
+    </div>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src = 'js/ej3.js' type="text/javascript"></script>
+    <script src = 'js/ej2.js' type="text/javascript"></script>
   </body>
 </html>
