@@ -1,10 +1,9 @@
 function sub(){
-  titulo = document.getElementsByName("titulo")[0].value;
-  descripcion = document.getElementsByName("descripcion")[0].value;
+  texto = document.getElementsByName("titulo")[0].value;
   var card = document.getElementById("card");
   const carta = document.createElement('div');
   carta.classList.add('card', 'blue-grey', 'darken-1', 'card-content', 'white-text', 'card-title');
-  carta.textContent = "" + titulo + descripcion + "";
+  carta.textContent = "" + texto + "";
   card.appendChild(carta)
 };
 
