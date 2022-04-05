@@ -1,5 +1,6 @@
 /**
  * Inserta en una tarjeta un texto que el usuario introduce por teclado
+ * Revisar innerHTML, creamos una variable con el html de lo que queremo smeter y llamamos a esste
  */
 function sub(){
   texto = document.getElementsByName("titulo")[0].value;
