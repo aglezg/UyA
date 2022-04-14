@@ -1,0 +1,21 @@
+.bluecustom {
+  background-color: #00bbffe0 !important;
+}
+
+.sectionCustom {
+  font-size: 2.3em;
+  margin-left: 1.5em;
+}
+
+.sectionBottomCustom {
+  font-size: 1.8em;
+}
+
+.inline-icon {
+  vertical-align: bottom;
+  font-size: 18px !important;
+}
+
+.textoCategoriasRelevantes {
+  font-size: 1.5vw;
+}
