@@ -1,13 +1,12 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCTFP0GIG1BaMc5J1JdUJX74sW3QZB4LX4",
-    authDomain: "mi-primer-proyecto-45c3e.firebaseapp.com",
-    databaseURL: "https://mi-primer-proyecto-45c3e-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "mi-primer-proyecto-45c3e",
-    storageBucket: "mi-primer-proyecto-45c3e.appspot.com",
-    messagingSenderId: "370541413472",
-    appId: "1:370541413472:web:b136459d1d6cf619f42f05",
-    measurementId: "G-ZMLJLYLJL4"
-  };
+  apiKey: "AIzaSyA0X3cStfEE_7472dc-DUlrX_VfOV8adl4",
+  authDomain: "pcbre-0.firebaseapp.com",
+  databaseURL: "https://pcbre-0-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "pcbre-0",
+  storageBucket: "pcbre-0.appspot.com",
+  messagingSenderId: "821214169913",
+  appId: "1:821214169913:web:4dcd3bf17b4ec20e85f6e8"
+};
 
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -15,9 +14,11 @@ const firebaseConfig = {
   // Base de datos
   var database = firebase.database();
   var referencia = database.ref('/');
-  referencia.once('value', snapshot => {
-    console.log(snapshot.val());
-  });
+  referencia.set({
+        actividad: 'jacob',
+        fecha: '123',
+        usuario: 'hola'
+    });
 /*
   // Referencia al nodo 'messages', si no existe se crea
   var messages = database.ref('messages');
