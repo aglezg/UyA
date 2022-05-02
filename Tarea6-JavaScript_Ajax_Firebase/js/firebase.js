@@ -13,6 +13,8 @@ const firebaseConfig = {
 
   // Base de datos
   var database = firebase.database();
+  
+  // Escribir
   var referencia = database.ref('/');
   referencia.set({
         actividad: 'jacob',
