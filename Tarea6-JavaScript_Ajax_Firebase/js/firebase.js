@@ -13,13 +13,6 @@ const firebaseConfig = {
 
   // Base de datos
   var database = firebase.database();
-  /*
-  referencia.set({
-        actividad: 'jacob',
-        fecha: '123',
-        usuario: 'hola'
-    });
-  */
 
   function checkSpecialCharacters(string) {
     var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
