@@ -1,0 +1,50 @@
+<html lang = 'es'>
+  <head>    
+    <title>
+        PCbre | Encuentra aqu&iacute los mejores componentes para tu ordenador.
+    </title>
+    <link rel="icon" href="./images/icono.jpg">
+  </head>
+
+  <body>
+    <br>  
+    <div align="center">
+      <a href="./main.html"> <img src="./images/icono.jpg" alt="Icono de la web" width="15%" height="25%"></a><br>
+      <h1>
+        ¡Registrate!           
+      </h1>
+      <label><strong>Nombre de usuario:</strong> </label>
+      <input type="text" placeholder="usuario" id="userName"><br>
+      <label><strong>Email:</strong> </label>
+      <input type="text" placeholder="usuario@example.com" id="email"><br>
+      <label><strong>Contraseña:</strong> </label>
+      <input type="password" placeholder="*******" id="password"><br>
+      <label><strong>Repetir contraseña:</strong> </label>
+      <input type="password" placeholder="*******" id="passwordRepeat"><br><br>
+
+      <em>La contraseña debe incluir como mínimo 8 carácteres alfa-numéricos.</em><br><br>
+      <label><strong>Género:</strong> </label><br>    
+      <input type="radio" name="genre" value="Hombre">Hombre<br>
+      <input type="radio" name="genre" value="Mujer">&nbsp;&nbsp;&nbsp;Mujer<br>
+      <input type="radio" name="genre" value="Otro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Otro<br><br>
+          
+      <label><strong>¿Ya elegistes foto de perfil? ¡Anímate a subir una!</strong></label><br><br>
+      <input type="file"><br><br>
+      <input type="checkbox" name="CheckBox" value="must"> He leido y acepto los términos y condiciones (obligatorio)<br>
+      <input type="checkbox" name="CheckBox" value="may"> Deseo recibir infromación acerca de descuentos, novedades y tendencias por e-mail.<br><br>
+
+      <input type="button" value="Crear cuenta" id="sing_up"><br>
+
+      <h3>
+        ¿Ya tienes una cuenta creada?
+      </h3>
+      <a href="signin.html"><input type="button" value="Iniciar sesión"><br></a>
+      <br>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./js/firebase.js" type="text/javascript"></script>
+  </body>
+
+</html>
