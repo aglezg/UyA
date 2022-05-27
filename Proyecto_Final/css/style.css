@@ -1,3 +1,38 @@
+
+.pruebaAdrian {
+  width: 50%;
+  height: 300px;
+  font-family: Arial;
+  font-size: 1,5em ;
+  background-color: rgb(224, 255, 255);
+  border-radius: 25px 25px 25px 25px;
+  margin: auto;
+}
+
+.botonYaCuenta {
+  margin: 52px;
+}
+
+.botonRegistro {
+  display: block;
+  width: 100%;
+
+}
+
+.singUpTitle {
+  font-size: 5em;
+  font-family: "Console", monospace;
+  color: #00bbffe0 !important;
+}
+
+.headerPcbre {
+  background-color: #00bbffe0 !important;
+}
+
+.headerPcbre div {
+  margin-left: 15px;
+}
+
 .bluecustom {
   background-color: #00bbffe0 !important;
 }
@@ -26,4 +61,8 @@
 
 .signInMargin {
   margin-top: 5%;
+}
+
+.signUpMargin {
+  margin-top: 2%;
 }
