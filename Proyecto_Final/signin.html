@@ -34,19 +34,29 @@
             </section1>
           </div>
           <div class="divider"></div>
-          <div class="input-field">
-            <i class="material-icons prefix">account_circle</i>
-            <input type="text" class="validate" id="userName">
-            <label for="icon_prefix">Nombre de usuario</label>
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">priority_high</i>
-            <input type="password" class="validate" id="password">
-            <label for="icon_prefix">Contraseña</label>
-          </div>
-          <button class="btn waves-effect blue" type="submit" name="action" id="sign_in">
-            Iniciar sesión
-          </button>
+          <form class="col s12" onsubmit="sigInFormFunc(); return false">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" class="validate" id="userName" required>
+                <label for="icon_prefix">Nombre de usuario</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">priority_high</i>
+                <input type="password" class="validate" id="password" required>
+                <label for="icon_prefix">Contraseña</label>
+              </div>
+            </div>
+            <div class="row center">
+              <div class="col s12">
+                <button class="btn waves-effect blue" type="submit" name="action" id="sign_in">
+                  Iniciar sesión
+                </button>
+              </div>
+            </div>
+          </form>          
           <p>
             <a href="./changepassword.html">¿Has olvidado tu contrase&ntildea?</a>
             <br>

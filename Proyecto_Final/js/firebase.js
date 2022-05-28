@@ -40,17 +40,6 @@ const firebaseConfig = {
     return stringAlert;
   }
 
-  function checkLogin() {
-    stringAlert = '';
-    if (document.getElementById("userName").value.length <= 0) {
-      stringAlert = '* El campo de nombre de usuario no puede estar vacío.\n';
-    }
-    if (document.getElementById("password").value.length <= 0) {
-      stringAlert += '* El campo de contraseña no puede estar vacío.\n';
-    }
-    return stringAlert;
-  }
-
   function checkEmail(email) {
     var stringEmail = ["@gmail.com", "@gmail.es", "@hotmail.es", "@hotmail.com", "@outlook.es", "@outlook.com", "@ull.edu.es"]
     var status = false;
@@ -111,24 +100,21 @@ const firebaseConfig = {
     }
   })
 
-  $("#sign_in").click(function() {
-    if (checkLogin() == '') {
-      userName = document.getElementById("userName").value;
-      password = document.getElementById("password").value;
-      reference = database.ref('/usuarios/' + userName);
-      reference.once('value', snapshot => {
-        if (snapshot.val()) {
-          if (password == snapshot.val().password) {
-            window.location.replace('./main.html');
-            alert("Bienvenido a PCbre, "+ userName);
-          } else {
-            alert("Parece que la contraseña que has ingresado no corresponde a ese usuario")
-          }
-        } else {
-          alert("Parece que no has ingresado un usuario válido")
-        }
-      });
+  
+ function sigInFormFunc() {
+  userName = document.getElementById("userName").value;
+  password = document.getElementById("password").value;
+  reference = database.ref('/usuarios/' + userName);
+  reference.once('value', snapshot => {
+    if (snapshot.val()) {
+      if (password == snapshot.val().password) {
+        window.location.replace('./main.html');
+        alert("Bienvenido a PCbre, "+ userName);
+      } else {
+        alert("Parece que la contraseña que has ingresado no corresponde a ese usuario")
+      }
     } else {
-      alert(checkLogin());
+      alert("Parece que no has ingresado un usuario válido")
     }
-  })
+  });
+ }
