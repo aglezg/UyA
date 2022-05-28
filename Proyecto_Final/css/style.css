@@ -20,8 +20,9 @@
 }
 
 .singUpTitle {
-  font-size: 2em;
+  font-size: 5em;
   font-family: "Console", monospace;
+  color: blue;
 }
 
 .headerPcbre {
@@ -40,6 +41,11 @@
   font-size: 2.3em;
 }
 
+.signUpSection {
+  margin-top: 0.5%;
+  font-size: 2em;
+}
+
 .sectionCustom {
   font-size: 2.3em;
   margin-left: 1.5em;
@@ -55,7 +61,7 @@
 }
 
 .textoCategoriasRelevantes {
-  font-size: 1.5vw;
+  font-size: 0.85em;
 }
 
 .signInMargin {
@@ -64,4 +70,33 @@
 
 .signUpMargin {
   margin-top: 2%;
+}
+
+.icon-white {
+  color: whitesmoke
+}
+
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 10%;
+  background: #e1e6e9;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.customMargin {
+  position: fixed;
+  top: -4.2em;
+}
+
+.botonCarritoVacio {
+  position: relative;
+  left: 1em;
 }

@@ -1,5 +1,5 @@
 .bluecustom {
-  background-color: #00bbffe0 !important;
+  background-color: #00b7ffe0 !important;
 }
 
 .sectionCustom {
@@ -18,4 +18,12 @@
 
 .textoCategoriasRelevantes {
   font-size: 1.5vw;
+}
+
+.centro {
+  text-align: center;
+}
+
+.borderRedondos {
+  border-radius: 15px;
 }

@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
+    <button class="waves-effect grey back-to-top hidden" ><i class="icon-white material-icons">arrow_upward</i> </button>
     <div class="row">
       <nav>
         <div class="nav-wrapper bluecustom">
@@ -41,7 +42,12 @@
             <a href="./signin.html"><i class="large material-icons">account_circle</i></a>
           </div>
           <div class="col s1">
-            <a href="#CARRITO"><i class="large material-icons">shopping_cart</i></a>
+            <a class="dropdown-trigger" href="#" data-target='carrito'><i class="large material-icons">shopping_cart</i></a>
+            <!-- Dropdown Structure -->
+            <ul id='carrito' class='dropdown-content customMargin list-group'>
+              <p class="text- black">Total: <span id="total"></span>&euro;</p>
+              <button id="boton-vaciar" class="botonCarritoVacio btn waves-effect blue">Vaciar</button>
+            </ul>
           </div>
           <div class="col s1">
             <a href="#CORREO"><i class="large material-icons">mail</i></a>
@@ -60,31 +66,31 @@
     <div class="divider"></div>
     <div class="row">
       <div class="col s1"></div>
-      <div class="col s2">
+      <div class="col s12 m2">
         <img class="responsive-img" src="./images/monitor4.webp"></img>
         <p class="center-align sectionBottomCustom">
           <a href="./monitores.html"><strong class="textoCategoriasRelevantes">Monitores</strong></a>
         </p>
       </div>
-      <div class="col s2">
+      <div class="col s12 m2">
         <img class="responsive-img" src="./images/teclado1.webp" width="100%"></img>
         <p class="center-align sectionBottomCustom">
           <strong class="textoCategoriasRelevantes">Teclados</strong>
         </p>
       </div>
-      <div class="col s2">
+      <div class="col s12 m2">
         <img class="responsive-img" src="./images/raton1.webp"></img>
         <p class="center-align sectionBottomCustom">
           <a href="./ratones.html"><strong class="textoCategoriasRelevantes">Ratones</strong></a>
         </p>
       </div>
-      <div class="col s2">
+      <div class="col s12 m2">
         <img class="responsive-img" src="./images/grafica1.webp"></img>
         <p class="center-align sectionBottomCustom">
           <strong class="textoCategoriasRelevantes">Gráficas</strong>
         </p>
       </div>
-      <div class="col s2">
+      <div class="col s12 m2">
         <img class="responsive-img" src="./images/auriculares1.webp"></img>
         <p class="center-align sectionBottomCustom">
           <strong class="textoCategoriasRelevantes">Auriculares</strong>
@@ -257,19 +263,19 @@
             <img src="images/jrod.jpg" alt="" class="circle">
             <span class="title">Supervisor t&eacutecnico</span>
             <p>Jacob Santana Rodr&iacuteguez</p>
-            <a href="https://github.com/Jacobsrguez" class="secondary-content"><i class="material-icons">grade</i></a>
+            <a href="https://github.com/Jacobsrguez" class="secondary-content"><i class="material-icons">call_made</i></a>
           </li>
           <li class="collection-item avatar">
             <img src="images/hrodjpg.jpg" alt="" class="circle">
             <span class="title">Main Head</span>
             <p>H&eacutector Rodr&iacuteguez Alonso</p>
-            <a href="https://github.com/alu0101365107" class="secondary-content"><i class="material-icons">grade</i></a>
+            <a href="https://github.com/alu0101365107" class="secondary-content"><i class="material-icons">call_made</i></a>
           </li>
           <li class="collection-item avatar">
             <img src="images/agon.jpg" alt="" class="circle">
             <span class="title">Jefe desarrollador</span>
             <p>Adri&aacuten Gonz&aacutelez Galv&aacuten</p>
-            <a href="https://github.com/alu0101321219" class="secondary-content"><i class="material-icons">grade</i></a>
+            <a href="https://github.com/alu0101321219" class="secondary-content"><i class="material-icons">call_made</i></a>
           </li>
         </ul>
       </div>
@@ -306,10 +312,12 @@
       </div>
     </footer>
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src = 'js/ej4.js' type="text/javascript"></script>
     <!-- <script src = 'js/ej3.js' type="text/javascript"></script> -->
     <script src = 'js/moneda.js' type="text/javascript"></script>
     <script src = 'js/ej2.js' type="text/javascript"></script>
+    <script src = 'js/botonVuelta.js' type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
   </head>
+  <body>
     <nav>
       <div class="nav-wrapper headerPcbre">
         <div class="col s12">
@@ -22,66 +23,93 @@
         </div>
       </div>
     </nav>
-    <div class="container singUpMargin ">
-      <h1 class="singUpTitle center">¿A qu&eacute esperas para registrarte?</h1>
-      <form>
-        <div class="row">
-          <div class="col s12 m6 l6 xl6">
-            <div class="input-field">
-              <i class="material-icons prefix">account_circle</i>
-              <input type="text" class="validate" id="userName">
-              <label for="icon_prefix">Nombre <sup>*</sup></label>
-            </div>
-          </div>
-          <div class="col s12 m6 l6 xl6">
-            <div class="input-field">
-              <i class="material-icons prefix">account_circle</i>
-              <input type="text" class="validate" id="userName">
-              <label for="icon_prefix">Apellidos <sup>*</sup></label>
-            </div>
-          </div>
-          <div class="col s12 m12 l12 xl12">
-            <div class="input-field">
-              <i class="material-icons prefix">contact_mail</i>
-              <input type="text" class="validate" id="userName">
-              <label for="icon_prefix">Correo Electronico <sup>*</sup></label>
-            </div>
-          </div>
-          <div class="col s12 m6 l6 xl6">
-            <div class="input-field">
-              <i class="material-icons prefix">priority_high</i>
-              <input type="text" class="validate" id="userName">
-              <label for="icon_prefix">Contraseña <sup>*</sup></label>
-            </div>
-          </div>
-          <div class="col s12 m6 l6 xl6">
-            <div class="input-field">
-              <i class="material-icons prefix">priority_high</i>
-              <input type="text" class="validate" id="userName">
-              <label for="icon_prefix">Confirmar Contraseña <sup>*</sup></label>
-            </div>
-          </div>
-          <p>
-            <label>
-              <input type="checkbox" />
-              <span>Quiero recibir ofertas exclusivas y novedades.</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" />
-              <span>He leído y aceptado la Política de Privacidad.</span>
-              <a href="./rules.html">(leer)</a>
-            </label>
-          </p>
-          <div class="col s12 m12 l12 xl12 ">
-            <button class="botonRegistro btn waves-effect blue" type="submit" name="action" id="sign_in">
-              <i class="material-icons prefix">save</i>
-              Registrarse
-            </button>
-          <br><br>
+    <div class="container signUpMargin ">
+      <div class="row center">
+        <div class="col s12">
+          <a href="./main.html"> <img class="responsive-img" width="138" height="48" src="./images/icono.jpg" alt="Icono de PCbre"></a>
         </div>
+        <div class="col s12">
+          <h1 class="signInSection"><strong>¡Bienvenido a PCbre!</strong></h1>
+        </div>
+      </div>
+      <form class="col s12" onsubmit="singUpForm(); return false">
+        <div class="row">
+          <div class="input-field col s12 m6 xl4 offset-xl2">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="userName" type="text" class="validate" required>
+            <label for="userName">Nombre de usuario*</label>
+          </div>
+          <div class="input-field col s12 m6 xl4">
+            <i class="material-icons prefix">mail</i>
+            <input id="email" type="email" class="validate" required>
+            <label for="email">email*</label>
+          </div>
+        </div>
+        <div class ="row">
+          <div class="input-field col s12 m6 xl4 offset-xl2">
+            <i class="material-icons prefix">priority_high</i>
+            <input id="password" type="password" class="validate" required>
+            <label for="password">Contrase&ntildea*</label>
+          </div>
+          <div class="input-field col s12 m6 xl4">
+            <i class="material-icons prefix">priority_high</i>
+            <input id="passwordRepeat" type="password" class="validate" required>
+            <label for="passwordRepeat">Confirmar contrase&ntildea*</label>
+          </div>
+        </div>
+        <div class ="row">
+          <div class="col s12 m6 l6 xl4 offset-xl2">
+            <h2 class="signUpSection">Selecciona*</h2>
+            <p>
+              <label>
+                <input name="genre" type="radio" value="Hombre" required/>
+                <span>Hombre</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="genre" type="radio" value="Mujer"required/>
+                <span>Mujer</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="genre" type="radio" value="Otro"required/>
+                <span>Otro</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s12 m6 l6 xl6">
+            <h2 class="signUpSection">Haznos saber...</h2>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>Quiero recibir ofertas exclusivas y novedades.</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" required/>
+                <span>He leído y aceptado la Política de Privacidad.*</span>
+                <a href="./rules.html">(leer)</a>
+              </label>
+            </p>
+          </div>
+          <div class="row center">
+            <div class="col s12">
+              <button class="btn waves-effect blue" type="submit" name="action" id="sing_up">
+                Crear cuenta
+              </button>
+            </div>
+          </div>
       </form>
+      <div class="row center">
+        <div class="col s12">
+          <p>
+            ¿Ya tienes cuenta? <a href="./signin.html">Inicia sesi&oacuten</a>
+          </p>
+        </div>
+      </div>
     </div>
 </form>
 

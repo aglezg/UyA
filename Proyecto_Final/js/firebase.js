@@ -37,6 +37,9 @@ const firebaseConfig = {
     if (!checkSpecialCharacters(password)) {
       stringAlert += '* La contraseña debe de contener al menos un carácter especial.\n';
     }
+    if (document.getElementById("password").value != document.getElementById("passwordRepeat").value) {
+      stringAlert += '* Las contraseñas deben coincidir.\n';
+    }
     return stringAlert;
   }
 
@@ -51,34 +54,50 @@ const firebaseConfig = {
     return status;
   }
 
-  function checkRegister() {
-    stringAlert = '';
-    var checks = [...document.getElementsByName("CheckBox")].filter(check => check.value == "must");
-    if (document.getElementById("userName").value.length <= 0) {
-      stringAlert = '* El campo de nombre de usuario no puede estar vacío.\n';
-    }
-    if (document.getElementById("password").value.length <= 0) {
-      stringAlert += '* El campo de contraseña no puede estar vacío.\n';
-    }
-    if (document.getElementById("email").value.length <= 0) {
-      stringAlert += '* El campo de e-mail no puede estar vacío.\n'
-    }
-    if (!checkEmail(document.getElementById("email").value)) {
-      stringAlert += '* El e-mail introducido no es válido.\n';
-    }
-    stringAlert += checkPassword(document.getElementById("password").value);
-    if (document.getElementById("password").value != document.getElementById("passwordRepeat").value) {
-      stringAlert += '* Las contraseñas deben coincidir.\n';
-    }
-    if ([...document.getElementsByName("genre")].filter(genre => genre.checked).length == 0) {
-      stringAlert += '* Se debe seleccionar un género.\n';
-    }
-    if (checks.filter(check => check.checked).length != checks.length) {
-      stringAlert += '* Todos los campos obligatorios deben rellenarse.\n'
-    }
-    return stringAlert;
+  function checkRegister(user) {
+    return new Promise<string>((resolve, reject) => {
+      var userRef = database.ref('/usuarios/' + user);
+      alert(userRef);
+
+      userRef.once('value', snapshot => {
+        alert(snapshot.val());
+        if (snapshot.val().password) {
+          reject(new Error('El usuario ya está registrado'));
+        } else {
+          resolve('La cuenta se ha creado correctamente');
+        }
+      });
+    });
   }
 
+  function singUpForm() {
+    var passwordChecker = checkPassword(document.getElementById("password").value);
+    if (passwordChecker) {
+      alert(passwordChecker);
+    } else {
+      var userName = document.getElementById("userName").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var genre = [...document.getElementsByName("genre")].filter(genre => genre.checked)[0].value;
+      var referencia = database.ref('/usuarios/');
+      var userRef = database.ref('/usuarios/' + userName);
+      checkRegister(userName).then((result) => {
+        referencia.update({
+          [userName] : {
+            "password":password,
+            "email": email,
+            "genre": genre,
+          } 
+        });
+          alert(result);
+          window.location.replace('./signin.html');
+      }).catch((err) => {
+        alert(err.message);
+      });
+    }
+  }
+
+  /*
   $("#sing_up").click(function() {
     if (checkRegister() == '') {
       var userName = document.getElementById("userName").value;
@@ -99,7 +118,7 @@ const firebaseConfig = {
       alert(checkRegister());
     }
   })
-
+*/
   
  function sigInFormFunc() {
   userName = document.getElementById("userName").value;

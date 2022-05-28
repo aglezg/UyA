@@ -9,6 +9,47 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
+  <button class="waves-effect grey back-to-top hidden" ><i class="icon-white material-icons">arrow_upward</i> </button>
+    <div class="row">
+      <nav>
+        <div class="nav-wrapper bluecustom">
+          <div class="col s2">
+            <img src="./images/icono_alargado.jpg" width="80" height="50">
+          </div>
+          <div class="col s4">
+            <nav class="bluecustom z-depth-0">
+              <form>
+                <div class="input-field z-depth-0">
+                  <input id="search" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+            </nav>
+          </div>
+          <div class="col s1"></div>
+          <div class="col s1">
+            <a href="#PREMIUM"><i class="large material-icons">monetization_on</i></a>
+          </div>
+          <div class="col s1">
+            <a href="./signin.html"><i class="large material-icons">account_circle</i></a>
+          </div>
+          <div class="col s1">
+            <a class="dropdown-trigger" href="#" data-target='carrito'><i class="large material-icons">shopping_cart</i></a>
+            <!-- Dropdown Structure -->
+            <ul id='carrito' class='dropdown-content customMargin list-group'>
+              <p class="text- black">Total: <span id="total"></span>&euro;</p>
+              <button id="boton-vaciar" class="botonCarritoVacio btn waves-effect blue">Vaciar</button>
+            </ul>
+          </div>
+          <div class="col s1">
+            <a href="#CORREO"><i class="large material-icons">mail</i></a>
+          </div>
+          <div class="col s1">
+            <a href="#CATEGORIAS"><i class="large material-icons">reorder</i></a>
+          </div>
+        </div>
+      </nav>
     <nav>
       <div class="nav-wrapper bluecustom">
         <a href="./main.html" class="breadcrumb">Inicio</a>
@@ -44,6 +85,5 @@
       </table>
       <br>
     </div>
-
   </body>
 </html>
