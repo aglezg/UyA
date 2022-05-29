@@ -82,7 +82,7 @@ const firebaseConfig = {
     }
   }
 
- function sigInFormFunc() {
+ function singInForm() {
   userName = document.getElementById("userName").value;
   password = document.getElementById("password").value;
   reference = database.ref('/usuarios/' + userName);
