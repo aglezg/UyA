@@ -43,28 +43,14 @@ const firebaseConfig = {
     return stringAlert;
   }
 
-  function checkEmail(email) {
-    var stringEmail = ["@gmail.com", "@gmail.es", "@hotmail.es", "@hotmail.com", "@outlook.es", "@outlook.com", "@ull.edu.es"]
-    var status = false;
-    for(i = 0; i < stringEmail.length; i++) {
-      if (email.includes(stringEmail[i])) {
-        status = true;
-      }
-    }
-    return status;
-  }
-
   function checkRegister(user) {
-    return new Promise<string>((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       var userRef = database.ref('/usuarios/' + user);
-      alert(userRef);
-
       userRef.once('value', snapshot => {
-        alert(snapshot.val());
-        if (snapshot.val().password) {
+        if (snapshot.val()) {
           reject(new Error('El usuario ya está registrado'));
         } else {
-          resolve('La cuenta se ha creado correctamente');
+          resolve('Bienvenido a PCbre, ' + user);
         }
       });
     });
@@ -80,8 +66,7 @@ const firebaseConfig = {
       var password = document.getElementById("password").value;
       var genre = [...document.getElementsByName("genre")].filter(genre => genre.checked)[0].value;
       var referencia = database.ref('/usuarios/');
-      var userRef = database.ref('/usuarios/' + userName);
-      checkRegister(userName).then((result) => {
+      checkRegister(userName).then((result) => {        
         referencia.update({
           [userName] : {
             "password":password,
@@ -97,29 +82,6 @@ const firebaseConfig = {
     }
   }
 
-  /*
-  $("#sing_up").click(function() {
-    if (checkRegister() == '') {
-      var userName = document.getElementById("userName").value;
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-      var genre = [...document.getElementsByName("genre")].filter(genre => genre.checked)[0].value;
-      var referencia = database.ref('/usuarios/');
-      referencia.update({
-        [userName] : {
-          "password":password,
-          "email": email,
-          "genre": genre,
-        } 
-      });
-        window.location.replace('./signin.html');
-        alert("Se ha creado correctamente la cuenta")
-    } else {
-      alert(checkRegister());
-    }
-  })
-*/
-  
  function sigInFormFunc() {
   userName = document.getElementById("userName").value;
   password = document.getElementById("password").value;
