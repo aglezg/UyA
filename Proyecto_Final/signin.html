@@ -14,14 +14,55 @@
     <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper headerPcbre">
-        <div class="col s12">
-          <a href="main.html" class="breadcrumb">PCbre</a>
-          <a href="signin.html" class="breadcrumb">Inicio de sesión</a>
+    <div class="row">
+      <nav>
+        <div class="nav-wrapper bluecustom">
+          <div class="col s2">
+            <img src="./images/icono_alargado.jpg" width="80" height="50">
+          </div>
+          <div class="col s4">
+            <nav class="bluecustom z-depth-0">
+              <form>
+                <div class="input-field z-depth-0 ">
+                  <input id="search" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+            </nav>
+          </div>
+          <div class="col s1"></div>
+          <div class="col s1">
+            <a href="#PREMIUM"><i class="large material-icons">monetization_on</i></a>
+          </div>
+          <div class="col s1">
+            <a href="./signin.html"><i class="large material-icons">account_circle</i></a>
+          </div>
+          <div class="col s1">
+            <a class="dropdown-trigger" href="#" data-target='carrito'><i class="large material-icons">shopping_cart</i></a>
+            <!-- Dropdown Structure -->
+            <ul id='carrito' class='dropdown-content customMargin list-group'>
+              <p class="text- black">Total: <span id="total"></span>&euro;</p>
+              <button id="boton-vaciar" class="botonCarritoVacio btn waves-effect blue">Vaciar</button>
+            </ul>
+          </div>
+          <div class="col s1">
+            <a href="#CORREO"><i class="large material-icons">mail</i></a>
+          </div>
+          <div class="col s1">
+            <a href="#CATEGORIAS"><i class="large material-icons">reorder</i></a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <nav>
+        <div class="nav-wrapper headerPcbre">
+          <div class="col s12">
+            <a href="main.html" class="breadcrumb">PCbre</a>
+            <a href="signin.html" class="breadcrumb">Inicio de sesión</a>
+          </div>
+        </div>
+      </nav>
+    </div>
     <div class="container signInMargin">
       <div class="row center">
         <div class="col s12 m6 l5 xl4">
