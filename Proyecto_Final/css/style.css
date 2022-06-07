@@ -1,12 +1,11 @@
-
-.pruebaAdrian {
-  width: 50%;
-  height: 300px;
-  font-family: Arial;
-  font-size: 1,5em ;
-  background-color: rgb(224, 255, 255);
-  border-radius: 25px 25px 25px 25px;
-  margin: auto;
+.headerUlMargin {
+  margin-right: 5%;
+}
+.headerLiMargin {
+  margin-left: 2em;
+}
+.titleMargin {
+  margin-left: 1%;
 }
 
 .botonYaCuenta {
