@@ -21,24 +21,24 @@ const firebaseConfig = {
   }
  
   function checkPassword(password) {
-    stringAlert = '';
+    stringAlert = [];
     if (password.length < 8) {
-      stringAlert = '* La contraseña debe contener un mínimo de 8 carácteres.\n'
+      stringAlert.push('La contraseña debe contener un mínimo de 8 carácteres.');
     }
     if (!(/[a-z]/).test(password)) {
-      stringAlert += '* La contraseña debe contener al menos un caracter en minúscula.\n'
+      stringAlert.push('La contraseña debe contener al menos un caracter en minúscula.');
     }
     if (!(/[A-Z]/).test(password)) {
-      stringAlert += '* La contraseña debe contener al menos un carácter en mayúscula.\n';
+      stringAlert.push('La contraseña debe contener al menos un carácter en mayúscula.');
     }
     if (!(/\d/).test(password)) {
-      stringAlert += '* La contraseña debe contener al menos un número\n';
+      stringAlert.push('La contraseña debe contener al menos un número');
     }
     if (!checkSpecialCharacters(password)) {
-      stringAlert += '* La contraseña debe de contener al menos un carácter especial.\n';
+      stringAlert.push('La contraseña debe de contener al menos un carácter especial.');
     }
     if (document.getElementById("password").value != document.getElementById("passwordRepeat").value) {
-      stringAlert += '* Las contraseñas deben coincidir.\n';
+      stringAlert.push('Las contraseñas deben coincidir.');
     }
     return stringAlert;
   }
@@ -58,8 +58,8 @@ const firebaseConfig = {
 
   function singUpForm() {
     var passwordChecker = checkPassword(document.getElementById("password").value);
-    if (passwordChecker) {
-      alert(passwordChecker);
+    if (passwordChecker.length != 0) {
+      passwordChecker.forEach(element => M.toast({html: `${element}`, classes: 'red'}));
     } else {
       var userName = document.getElementById("userName").value;
       var email = document.getElementById("email").value;
@@ -74,15 +74,14 @@ const firebaseConfig = {
             "genre": genre,
           } 
         });
-          alert(result);
           window.location.replace('./signin.html');
       }).catch((err) => {
-        alert(err.message);
+        M.toast({html: `${err.message}`, classes: 'orange'});
       });
     }
   }
 
- function singInForm() {
+ function singInForm() {  
   userName = document.getElementById("userName").value;
   password = document.getElementById("password").value;
   reference = database.ref('/usuarios/' + userName);
@@ -90,12 +89,11 @@ const firebaseConfig = {
     if (snapshot.val()) {
       if (password == snapshot.val().password) {
         window.location.replace('./main.html');
-        alert("Bienvenido a PCbre, "+ userName);
       } else {
-        alert("Parece que la contraseña que has ingresado no corresponde a ese usuario")
+        M.toast({html: 'Parece que la contraseña que has ingresado no corresponde a ese usuario', classes: 'orange'});
       }
     } else {
-      alert("Parece que no has ingresado un usuario válido")
+      M.toast({html: 'Parece que no has ingresado un usuario válido', classes: 'red'});
     }
   });
  }
