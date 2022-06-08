@@ -2,7 +2,7 @@
 <html lang = 'es'>
   <head>    
     <title>
-        PCbre | Inicio de sesi&oacuten
+        PCbre | Registro
     </title>
     <link rel="icon" href="./images/icono.jpg">
     <!--Import Google Icon Font-->
@@ -24,7 +24,7 @@
               <nav class="bluecustom z-depth-0">
                 <form>
                   <div class="input-field z-depth-0 ">
-                    <label class="label-icon"><i class="material-icons">search</i></label>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                     <input class="autocomplete" type="search" required>
                     <i class="material-icons">close</i>
                   </div>
@@ -49,7 +49,7 @@
         <li>
           <form>
             <div class="input-field z-depth-0 ">
-              <label class="label-icon"><i class="material-icons">search</i></label>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
               <input class="autocomplete" type="search" required>
               <i class="material-icons">close</i>
             </div>
@@ -57,69 +57,58 @@
         </li>
         <li><a href="#PREMIUM">Premium</a></li>
         <li><a href="./signin.html">Iniciar sesión</a></li>
-        <li><a href="#Carrito">Carrito de la compra</a></li>
+        <li><a href="./carrito.html">Carrito de la compra</a></li>
         <li><a href="#MAIL">Correo</a></li>
       </ul>
       <nav>
         <div class="nav-wrapper headerPcbre">
           <div class="col s12">
             <a href="main.html" class="breadcrumb">PCbre</a>
-            <a href="signin.html" class="breadcrumb">Inicio de sesión</a>
+            <a href="carrito.html" class="breadcrumb">Carrito</a>
           </div>
         </div>
       </nav>
     </div>
-    <div class="container signInMargin">
-      <div class="row center">
-        <div class="col s6 offset-s3 m6 l5 xl4">
-          <a href="./main.html"> <img class="responsive-img" src="./images/icono.jpg" alt="Icono de PCbre"></a><br>
-        </div>
-        <div class="col s12 m6 l7 xl8">
-          <div class="section">
-            <section1 class="signInSection">
-              <strong>Inicio de sesi&oacuten</strong>
-            </section1>
-          </div>
-          <div class="divider"></div>
-          <form class="col s12" onsubmit="singInForm(); return false">
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input type="text" class="validate" id="userName" required>
-                <label for="icon_prefix">Nombre de usuario</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">priority_high</i>
-                <input type="password" class="validate" id="password" required>
-                <label for="icon_prefix">Contraseña</label>
-              </div>
-            </div>
-            <div class="row center">
-              <div class="col s12">
-                <button class="btn waves-effect blue" type="submit" name="action" id="sign_in">
-                  Iniciar sesión
-                </button>
-              </div>
-            </div>
-          </form>          
-          <p>
-            <a href="./changepassword.html">¿Has olvidado tu contrase&ntildea?</a>
-            <br>
-            <a href="./signup.html">Reg&iacutestrate</a>
-          </p>
-        </div>
-      </div> 
+    <div class="row">
+      <table class="centered" id="contenidoCarrito">
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Acción</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+      </table>
     </div>
+    <div class="row center precioTotal">
+      <div class="col s1 offset-s5">
+      <p><strong>TOTAL: 0.0 EUR</strong></p>
+      </div>
+      <div class="col s2">
+        <label>
+          <input class="with-gap" name="moneda" type="radio" onfocus="getConvert('EUR', 'USD');return false;"/>
+          <span>USD</span>
+        </label>
+        <label>
+          <input class="with-gap" name="moneda" type="radio" onfocus="getConvert('EUR', 'EUR', false);return false;" />
+          <span>EUR</span>
+        </label>
+      </div>
+      <div class="col s12">
+      <button class="monitor btn waves-effect blue" value="AOC Ultra" precio="2" id="monitor">
+        Pagar
+      </button>
+      </div>
+    </div>
+  </body>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="./js/firebase.js" type="text/javascript"></script>
-    <script src= 'js/mobileCollapseButton.js' type="text/javascript"></script>
     <script src = 'js/searchContent.js' type="text/javascript"></script>
+    <script src = 'js/carrito.js' type="text/javascript"></script>
+    <script src= 'js/mobileCollapseButton.js' type="text/javascript"></script>
   </body>
-
 </html>

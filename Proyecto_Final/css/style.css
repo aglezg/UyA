@@ -89,13 +89,3 @@
 .hidden {
   display: none;
 }
-
-.customMargin {
-  position: fixed;
-  top: -4.2em;
-}
-
-.botonCarritoVacio {
-  position: relative;
-  left: 1em;
-}
